@@ -74,7 +74,7 @@ void dfs(ll v, vector<HeavyLight>& g, ll h, ll p = 0) {
     g[v].w = 1;
     g[v].father = p;
     up[v][0] = p;
-    ll max_weight = -1e9, max_vert = -5;//самая тяжелая - в какую вершину ведет
+    ll max_weight = -1e9, max_vert = -5;//самый тяжелый вес - у какой вершины
     for (int i = 1; i <= l; i++)// для lca
         up[v][i] = up[up[v][i - 1]][i - 1];
     for (int i = 0; i < g[v].EdgeTo.size(); i++) {
